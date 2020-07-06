@@ -13,8 +13,10 @@ export class ServersComponent implements OnInit {
   serverStatus: string = "offline";
   allowToAdd: boolean;
 
+  serverName: string = '';
 
-  constructor() { 
+
+  constructor() {
     setTimeout(() => {
       this.allowToAdd = true
     }, 2000);
@@ -26,5 +28,11 @@ export class ServersComponent implements OnInit {
   changeServerStatus() {
     this.serverStatus = "online";
   }
+
+  setServerName(event: any) {
+    console.log("event data " + event.target.value);
+  }
+
+
 
 }
