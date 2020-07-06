@@ -1,1 +1,5 @@
 <p>servers works!</p>
+
+<div> This server id {{serverId}} and status {{serverStatus}}</div>
+
+<button class="btn btn-primary" [disabled] = "!allowToAdd" (click) = "changeServerStatus()"> Add Server </button>

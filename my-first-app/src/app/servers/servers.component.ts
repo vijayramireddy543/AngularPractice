@@ -9,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
+  serverId: number = 1200;
+  serverStatus: string = "offline";
+  allowToAdd: boolean;
+
+
+  constructor() { 
+    setTimeout(() => {
+      this.allowToAdd = true
+    }, 2000);
+  }
 
   ngOnInit(): void {
+  }
+
+  changeServerStatus() {
+    this.serverStatus = "online";
   }
 
 }
